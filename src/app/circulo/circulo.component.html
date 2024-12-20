@@ -1,3 +1,30 @@
-<p>
-  circulo works!
-</p>
+<div>
+  <!-- card -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Perímetro</ion-card-subtitle>
+      <ion-card-title>Círculo</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      El perímetro de un círculo es la lingitud de la línea que forma su borde.
+    </ion-card-content>
+
+    <ion-img src="../../assets/img/perimetrocirculo.png" alt="imagen perimetrocirculo"></ion-img>
+  </ion-card>
+
+  <!-- formulario -->
+  <ion-list>
+    <ion-item>
+      <!-- aquí vinculamos el numero ingresado al atributo (radio) de la clase -->
+      <ion-input label="Radio" labelPlacement="stacked" type="number" [(ngModel)]="radio"></ion-input> 
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="calcularPerimetroOnClick()">Calcular el perimetro</ion-button>
+
+  <!-- parrafo respuesta -->
+
+  <p *ngIf="resultadoPerimetro">Respueta: el perimetro es: {{resultadoPerimetro}}</p>
+
+
+</div>
